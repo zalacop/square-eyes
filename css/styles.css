@@ -4,5 +4,40 @@ ul {
 }
 
 body {
-    background-color: #038C8C;
+    background-color: #3E696D;
 }
+
+.logo {
+    width: 15%;
+}
+
+.crop-continue__img {
+    border-radius: 10px;
+    width: 15%; 
+    height: 150px; 
+    object-fit: cover;
+}
+
+.continue__img {
+    border-radius: 10px;
+    width: 15%;
+}
+
+.crop__img {
+    border-radius: 10px;
+    width: 10%; 
+    height: 100px; 
+    object-fit: cover;
+}
+
+.img {
+    border-radius: 10px;
+    width: 10%;
+}
+
+/* Home page */
+.new {
+    border-radius: 20px;
+    width: 60%;
+}
+
