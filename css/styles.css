@@ -56,10 +56,6 @@ a {
     padding: 0px 50px 0px 0px;
 } 
 
-.casting {
-    display: none;
-}
-
 .continue,
 .options {
     display: flex;
@@ -147,24 +143,104 @@ footer {
     padding: 30px;
 }
 
-@media (max-width:400px) {
+@media (max-width:950px) {
+    ul {
+        font-size: 0.8em;
+    }  
+
+    h1,
+    .shadow-drop {
+        font-size: 1.3em;
+        padding: 20px 0px 5px 80px;
+    }
+
+    h1 {
+        padding: 0px 0px 5px 80px;
+    }
+    
+    .fa-regular,
+    .fa-solid {
+        font-size: 23px;
+    }
+
     header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 67.5px;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        align-items: center;
+        padding: 0px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .promotion {
+        height: 180px;
+        padding: 20px 0px;
+        gap: 1em;
+    }
+
+    .continue-size {
+        width: 90px;
+        gap: 0.5em;
+    }
+
+    .continue-crop__img,
+    .continue__img {
+        height: 135px;
+    }
+
+    .continue,
+    .options {
+        padding: 0px 0px 0px 90px;
+        margin: 0px;
+        gap: 0.5em;
+    }
+
+    .continue {
+        gap: 1em;
+    }
+
+    .crop__img,
+    .img {
+        height: 105px;
+        width: 70px;
+    }
+
+    footer {
         background-color: white;
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        align-items: center;
+        margin: 40px 0px 0px 0px;
+    }
+
+    .logo__footer {
+        width: 160px;
+        padding: 0px 30px;
+    }
+    
+    .nav-menu__footer ul {
+        display: flex;
+        gap: 3rem;
+    }
+    
+    .nav-menu__footer li{
+        font-size: 1.1em;
+        }
+}
+
+@media (max-width:420px) {
+    header {
         display: flex;
         padding: 5px;
     } 
-
-    .nav-menu ul,
-    .icons {
-        display: none;
-    }
-    
-    .casting {
-        display: block;
-        color: #012626;
-        font-size: 25px;
-        padding: 0px 0px 0px 130px ;
-    }
 
     .logo {
         width: 100px;
@@ -173,16 +249,18 @@ footer {
 
     .promotion {
         height: 150px;
-        padding: 20px;
+        padding: 10px 0px;
     }
 
-    .shadow-drop {
+    .shadow-drop, 
+    h1 {
         font-size: 1.2em;
+        padding: 10px 0px 5px 40px;
+        margin: 30px 0px 0px 0px;
     }
 
     h1 {
         padding: 10px 0px 5px 40px;
-        margin: 30px 0px 0px 0px;
     }
 
     .continue-size {
@@ -196,13 +274,11 @@ footer {
 
     .continue {
         padding: 10px 0px 0px 60px;
-        margin: 0px;
         gap: 1em;
     }
 
     .options {
         padding: 10px 0px 15px 60px;
-        margin: 0px;
         gap: 0em;
     }
 
@@ -216,8 +292,22 @@ footer {
         width: 63px;
     }
 
+    .logo__footer {
+        width: 130px;
+        padding: 0px 30px;
+    }
+
     footer {
-        display: none;
+        display: flex;
+        gap: 1em;
+    }
+    
+    .nav-menu__footer ul {
+        display: grid;
+        gap: 0em;
+        padding: 0px;
     }
 }
+
+
 
