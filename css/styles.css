@@ -83,12 +83,12 @@ footer {
     margin: 40px 0px 0px 0px;
 }
 
-.nav-menu__footer ul {
+.menu__footer ul {
     display: flex;
     gap: 13rem;
 }
 
-.nav-menu__footer li{
+.menu__footer li{
     font-size: 1em;
     }
 
