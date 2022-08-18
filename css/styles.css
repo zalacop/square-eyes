@@ -27,12 +27,17 @@ header {
     grid-template-columns: 200px 1fr 150px;
 }
 
-.nav-menu ul {
+.bars,
+.nav-menu {
+    display: none;
+}
+
+.menu ul {
     display: flex;
     gap: 1em;
 }
 
-.nav-menu li {
+.menu li {
     font-size: 1.2em;
     font-weight: bold;
     padding: 0px 60px;
@@ -101,17 +106,21 @@ footer {
     filter: drop-shadow(5px 5px 5px #012626);
 }
 
-.continue-crop__img {
-    border-radius: 10px;
-    width: 100%; 
-    height: 150px; 
-    object-fit: cover;
+.continue-crop__img,
+.continue__img,
+.crop__img,
+.img {
+    border-radius: 0.8em;
+    width: 100%;
 }
 
-.continue__img {
-    border-radius: 10px;
-    width: 100%;
+.continue__img,
+.continue-crop__img {
     height: 150px;
+}
+
+.continue-crop__img {
+    object-fit: cover;
 }
 
 .options-size {
@@ -119,15 +128,8 @@ footer {
 }
 
 .crop__img {
-    border-radius: 10px;
-    width: 100%; 
     height: 118px; 
     object-fit: cover;
-}
-
-.img {
-    border-radius: 10px;
-    width: 100%;
 }
 
 .logo__footer {
@@ -139,8 +141,8 @@ footer {
 .promotion {
     display: flex;
     justify-content: center;
-    height: 200px;
-    padding: 30px;
+    max-height: 200px;
+    padding: 1.5em;
 }
 
 @media (max-width:950px) {
@@ -160,35 +162,47 @@ footer {
     
     .fa-regular,
     .fa-solid {
-        font-size: 23px;
+        font-size: 20px;
     }
 
     header {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .menu ul {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        height: 67.5px;
     }
 
-    .nav-menu ul {
-        display: flex;
-        align-items: center;
+    .menu ul {
         padding: 0px;
+    }
+
+    .menu li {
+        padding: 0px 40px;
     }
 
     .logo {
         width: 120px;
     }
 
+    .icons {
+        grid-column-start: 4;
+    }
+
     .promotion {
         height: 180px;
         padding: 20px 0px;
-        gap: 1em;
+    }
+
+    .promotion,
+    .continue {
+        gap: 1rem;
     }
 
     .continue-size {
         width: 90px;
-        gap: 0.5em;
+        gap: 0.5rem;
     }
 
     .continue-crop__img,
@@ -200,11 +214,7 @@ footer {
     .options {
         padding: 0px 0px 0px 90px;
         margin: 0px;
-        gap: 0.5em;
-    }
-
-    .continue {
-        gap: 1em;
+        gap: 0.5rem;
     }
 
     .crop__img,
@@ -226,12 +236,12 @@ footer {
         padding: 0px 30px;
     }
     
-    .nav-menu__footer ul {
+    .menu__footer ul {
         display: flex;
         gap: 3rem;
     }
     
-    .nav-menu__footer li{
+    .menu__footer li{
         font-size: 1.1em;
         }
 }
@@ -239,12 +249,45 @@ footer {
 @media (max-width:420px) {
     header {
         display: flex;
-        padding: 5px;
-    } 
+        justify-content: space-evenly;
+    }
 
     .logo {
         width: 100px;
-        padding: 30px;
+    }
+    
+    .bars {
+        display: block;
+        padding: 0px 20px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .nav-menu:checked ~ nav {
+        display: block;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-content: center;
+        background-color: #3E696D;
+        position: relative;
+        margin: 0px;
+        width: 140px;
+        height: 99.25px;
+        top: 70.5px;
+        left: -47px;
+        z-index: 1000;
+
+    }
+
+    .icons {
+        gap: 1.5rem;
+        padding: 0px 50px 0px 0px;
     }
 
     .promotion {
@@ -270,16 +313,16 @@ footer {
     .continue-crop__img,
     .continue__img {
         height: 115px;
+        width: 90px;
     }
 
     .continue {
         padding: 10px 0px 0px 60px;
-        gap: 1em;
+        gap: 1rem;
     }
 
     .options {
         padding: 10px 0px 15px 60px;
-        gap: 0em;
     }
 
     .options-size {
@@ -299,15 +342,16 @@ footer {
 
     footer {
         display: flex;
-        gap: 1em;
+        gap: 1rem;
     }
     
-    .nav-menu__footer ul {
+    .menu__footer ul {
         display: grid;
-        gap: 0em;
+        gap: 0rem;
         padding: 0px;
     }
 }
+
 
 
 

@@ -14,16 +14,20 @@
 </head>
 <body>
   <header>
-    <div>
-      <img src="images/SquareEyes.jpg" alt="Square Eyes logo" class="logo"/>
-    </div>
-    <nav class="nav-menu">
-      <ul>
-        <li><a href="index.html" class="colour">Movies</a></li>
-         <li><a href="index.html" class="colour">Series</a></li>
-         <li><a href="index.html" class="colour">Cartoons</a></li>
-        </ul>
-      </nav>
+      <div>
+        <img src="images/SquareEyes.jpg" alt="Square Eyes logo" class="logo"/>
+      </div>
+      <div class="bars">
+        <label for="nav-menu"><i class="fa-solid fa-bars"></i></label>
+      </div>
+      <input type="checkbox" id="nav-menu" class="nav-menu">
+        <nav class="menu">
+          <ul>
+            <li><a href="index.html" class="colour">Movies</a></li>
+            <li><a href="index.html" class="colour">Series</a></li>
+            <li><a href="index.html" class="colour">Cartoons</a></li>
+            </ul>
+          </nav>
      <section class="icons">
       <i class="fa-solid fa-magnifying-glass"></i>
       <i class="fa-regular fa solid fa-user"></i>
@@ -136,7 +140,7 @@
     <div>
       <img src="images/SquareEyes.jpg" alt="Square Eyes logo" class="logo__footer"/>
     </div>
-    <nav class="nav-menu__footer">
+    <nav class="menu__footer">
       <ul>
         <li><a href="index.html" class="colour__footer">About us</a></li>
         <li><a href="index.html" class="colour__footer">Terms & Conditions</a></li>
