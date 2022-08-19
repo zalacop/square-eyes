@@ -59,7 +59,32 @@ a {
     display: flex;
     gap: 3em;
     padding: 0px 50px 0px 0px;
+    height: 39px;
 } 
+
+.user-menu__nav,
+.user-menu {
+    display: none;
+}
+
+.user-menu:checked ~ nav {
+    display: block;
+}
+
+.user-menu__nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3E696D;
+    color: #FEF8DF;
+    position: relative;
+    left: -110px;
+    top: 33px;
+    height: 116px;
+    padding: 0px 20px;
+    border-radius: 0px 10px 10px 10px;
+    gap: 0.5em;
+}
 
 .continue,
 .options {
@@ -188,6 +213,25 @@ footer {
 
     .icons {
         grid-column-start: 4;
+        height: 19.5px;
+    }
+
+    .user-menu__nav li {
+        font-size: 1.1em;
+    }
+
+    .user-menu ul {
+        position: relative;
+        left: -100px;
+        top: 22px;
+        background-color: #3E696D;
+        height: 94.5px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        padding: 0px 20px 0px 0px;
+        font-size: 0.9em;
+        height: 100px;
     }
 
     .promotion {
@@ -250,10 +294,12 @@ footer {
     header {
         display: flex;
         justify-content: space-evenly;
+        height: 67.5px;
     }
 
     .logo {
         width: 100px;
+        padding: 0px 0px 0px 55px;
     }
     
     .bars {
@@ -277,17 +323,32 @@ footer {
         background-color: #3E696D;
         position: relative;
         margin: 0px;
-        width: 140px;
-        height: 99.25px;
-        top: 70.5px;
-        left: -47px;
+        width: 90px;
+        height: 87px;
+        top: 60px;
+        left: -56px;
         z-index: 1000;
-
     }
 
     .icons {
         gap: 1.5rem;
         padding: 0px 50px 0px 0px;
+        height: 25.5px;
+        width: 126px;
+    }
+    
+    .user-menu__nav li {
+        font-size: 1.1em;
+    }
+
+    .user-menu__nav ul {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        left: -70px;
+        top: 20px;
+        gap: 0.5rem;
+        background-color: #3e696d;
     }
 
     .promotion {
@@ -300,10 +361,6 @@ footer {
         font-size: 1.2em;
         padding: 10px 0px 5px 40px;
         margin: 30px 0px 0px 0px;
-    }
-
-    h1 {
-        padding: 10px 0px 5px 40px;
     }
 
     .continue-size {
@@ -351,7 +408,3 @@ footer {
         padding: 0px;
     }
 }
-
-
-
-
