@@ -34,7 +34,7 @@ header {
 
 .menu ul {
     display: flex;
-    gap: 1em;
+    gap: 1rem;
 }
 
 .menu li {
@@ -57,7 +57,7 @@ a {
 
 .icons {
     display: flex;
-    gap: 3em;
+    gap: 3rem;
     padding: 0px 50px 0px 0px;
     height: 39px;
 } 
@@ -83,7 +83,7 @@ a {
     height: 116px;
     padding: 0px 20px;
     border-radius: 0px 10px 10px 10px;
-    gap: 0.5em;
+    gap: 0.5rem;
 }
 
 .continue,
@@ -131,8 +131,8 @@ footer {
     filter: drop-shadow(5px 5px 5px #012626);
 }
 
-.continue-crop__img,
 .continue__img,
+.continue-crop__img,
 .crop__img,
 .img {
     border-radius: 0.8em;
@@ -144,7 +144,8 @@ footer {
     height: 150px;
 }
 
-.continue-crop__img {
+.continue-crop__img,
+.crop__img {
     object-fit: cover;
 }
 
@@ -154,7 +155,6 @@ footer {
 
 .crop__img {
     height: 118px; 
-    object-fit: cover;
 }
 
 .logo__footer {
@@ -175,13 +175,8 @@ footer {
         font-size: 0.8em;
     }  
 
-    h1,
-    .shadow-drop {
-        font-size: 1.3em;
-        padding: 20px 0px 5px 80px;
-    }
-
     h1 {
+        font-size: 1.3em;
         padding: 0px 0px 5px 80px;
     }
     
@@ -194,12 +189,10 @@ footer {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
+
     .menu ul {
         display: flex;
         align-items: center;
-    }
-
-    .menu ul {
         padding: 0px;
     }
 
@@ -242,6 +235,10 @@ footer {
     .promotion,
     .continue {
         gap: 1rem;
+    }
+
+    .shadow-drop {
+        padding: 20px 0px 5px 80px;
     }
 
     .continue-size {
@@ -315,13 +312,18 @@ footer {
         display: block;
     }
 
-    .menu ul {
+    .menu ul,
+    .user-menu__nav ul {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
-        align-content: center;
         background-color: #3E696D;
         position: relative;
+        gap: 0.5rem;
+        border-radius: 0px 10px 10px 10px;
+    }
+
+    .menu ul {
+        align-content: center;
         margin: 0px;
         width: 90px;
         height: 87px;
@@ -342,13 +344,8 @@ footer {
     }
 
     .user-menu__nav ul {
-        display: flex;
-        flex-direction: column;
-        position: relative;
         left: -70px;
         top: 20px;
-        gap: 0.5rem;
-        background-color: #3e696d;
     }
 
     .promotion {
