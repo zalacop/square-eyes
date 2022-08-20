@@ -110,7 +110,7 @@ footer {
 
 .menu__footer ul {
     display: flex;
-    gap: 13rem;
+    justify-content: space-evenly;
 }
 
 .menu__footer li{
