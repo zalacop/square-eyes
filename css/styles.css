@@ -1,4 +1,4 @@
-h1, 
+h2, 
 ul,
 .fa-solid,
 .fa-regular {
@@ -6,7 +6,7 @@ ul,
     color: #FEF8DF;
 }
 
-h1 {
+h2 {
     font-size: 1.2em;
     margin: 10px;
     padding: 30px 0px 5px 100px;
@@ -54,6 +54,10 @@ a {
 
 .colour {
     color: #FEF8DF;
+}
+
+.active {
+    text-decoration: underline;
 }
 
 .icons {
