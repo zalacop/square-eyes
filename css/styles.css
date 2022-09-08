@@ -15,6 +15,7 @@ h2 {
 .fa-regular,
 .fa-solid {
     font-size: 30px;
+    cursor: pointer;
 }
 
 body {
@@ -173,12 +174,58 @@ footer {
 
 /* Home page */
 .promotion {
-    display: grid;
-    grid-auto-flow: column;
-    max-height: 200px;
-    padding: 1.5em;
-    overflow-x: auto;
+    margin: 20px auto;
+    max-width: clamp(250px, 99vw, 800px);
+    overflow: hidden;
+}
+
+.images {
+    display: flex;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.images img {
+    height: 100%;
+    width: clamp(250px, 99vw, 800px);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.images input {
+    display: none;
+}
+
+.navigation-manual {
+    display: flex;
     justify-content: center;
+    margin: 5px;
+}
+
+.navigation-manual label {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: solid #fff 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.navigation-manual label:hover {
+    background: #fff;
+}
+
+#image1:checked ~ .img1 {
+    margin-left: 0;
+}
+
+#image2:checked ~ .img2 {
+    margin-left: -100%;
+}
+
+#image3:checked ~ .img3 {
+    margin-left: -200%;
 }
 
 @media (max-width:950px) {
@@ -238,12 +285,6 @@ footer {
         height: 100px;
     }
 
-    .promotion {
-        height: 180px;
-        padding: 20px 0px;
-    }
-
-    .promotion,
     .continue {
         gap: 1rem;
     }
@@ -353,13 +394,8 @@ footer {
         top: -165px;
     }
 
-    .promotion {
-        height: 150px;
-        padding: 0px;
-    }
-
     .shadow-drop, 
-    h2 {
+    h {
         font-size: 1.2em;
         padding: 10px 0px 5px 40px;
         margin: 30px 0px 0px 0px;
