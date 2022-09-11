@@ -112,7 +112,7 @@ main {
 }
 
  .form__input:focus ~ .form__label-password,
- .form__input:not(:placeholder-shown).form__input:not(:focus)  ~ .form__lbel-password {
+ .form__input:not(:placeholder-shown).form__input:not(:focus)  ~ .form__label-password {
     display: none;
  }
 
