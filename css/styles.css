@@ -1,9 +1,9 @@
+@import "imports/variables.css";
+
 h2, 
-ul,
-.fa-solid,
-.fa-regular {
-    font-family: "Outfit", Verdana, Geneva, Tahoma, sans-serif;
-    color: #FEF8DF;
+ul {
+    font-family: var(--heading-link), Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--text-colour);
 }
 
 h2 {
@@ -14,18 +14,23 @@ h2 {
 
 .fa-regular,
 .fa-solid {
-    font-size: 30px;
+    font-size: clamp(20px, 10vw + 2px, 30px);
     cursor: pointer;
 }
 
 body {
-    background-color: #3E696D;
+    background-color: var(--background);
 }
 
 header {
     display: grid;
     align-items: center;
     grid-template-columns: 200px 1fr 150px;
+}
+
+.fa-solid,
+.fa-regular {
+    color: var(--cta-colour);
 }
 
 .home,
@@ -51,10 +56,11 @@ nav li {
 
 a {
     text-decoration: none;
+    color: var(--text-colour);
 }
 
 .colour {
-    color: #FEF8DF;
+    color: var(--cta-colour);
 }
 
 .active {
@@ -81,8 +87,8 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #3E696D;
-    color: #FEF8DF;
+    background-color: var(--background);
+    color: var(--text-colour);
     position: relative;
     left: -110px;
     top: 33px;
@@ -103,7 +109,7 @@ a {
 
 .shadow-drop {
     font-size: 1.5em;
-    text-shadow: 5px 5px 5px #012626;
+    text-shadow: 5px 5px 5px var(--dark-colour);
 }
 
 footer {
@@ -128,7 +134,7 @@ footer {
     }
 
 .colour__footer {
-    color: #012626;
+    color: var(--dark-colour);
 }
 
 /* Images */
@@ -138,7 +144,7 @@ footer {
 
 .continue-size {
     width: 100px;
-    filter: drop-shadow(5px 5px 5px #012626);
+    filter: drop-shadow(5px 5px 5px var(--dark-colour));
 }
 
 .continue__img,
@@ -206,14 +212,14 @@ footer {
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    border: solid #fff 3px;
+    border: solid var(--text-colour) 3px;
     cursor: pointer;
     transition: all 0.3s ease;
     margin: 5px;
 }
 
 .navigation-manual label:hover {
-    background: #fff;
+    background: var(--text-colour);
 }
 
 #image1:checked ~ .img1 {
@@ -226,229 +232,4 @@ footer {
 
 #image3:checked ~ .img3 {
     margin-left: -200%;
-}
-
-@media (max-width:950px) {
-    ul {
-        font-size: 0.8em;
-    }  
-
-    h2 {
-        font-size: 1.3em;
-        padding: 0px 0px 5px 80px;
-    }
-    
-    .fa-regular,
-    .fa-solid {
-        font-size: 20px;
-    }
-
-    header {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .menu ul {
-        display: flex;
-        align-items: center;
-        padding: 0px;
-    }
-
-    .menu li {
-        padding: 0px 40px;
-    }
-
-    .logo {
-        width: 120px;
-    }
-
-    .icons {
-        grid-column-start: 4;
-        height: 19.5px;
-    }
-
-    .user-menu__nav li {
-        font-size: 1.1em;
-    }
-
-    .user-menu ul {
-        position: relative;
-        left: -100px;
-        top: 22px;
-        background-color: #3E696D;
-        height: 94.5px;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        padding: 0px 20px 0px 0px;
-        font-size: 0.9em;
-        height: 100px;
-    }
-
-    .continue {
-        gap: 1rem;
-    }
-
-    .shadow-drop {
-        padding: 20px 0px 5px 80px;
-    }
-
-    .continue-size {
-        width: 90px;
-        gap: 0.5rem;
-    }
-
-    .continue-crop__img,
-    .continue__img {
-        height: 135px;
-    }
-
-    .continue,
-    .options {
-        padding: 0px 0px 0px 90px;
-        margin: 0px;
-        gap: 0.5rem;
-    }
-
-    .crop__img,
-    .img {
-        height: 105px;
-        width: 70px;
-    }
-
-    footer {
-        background-color: white;
-        display: grid;
-        grid-template-columns: 200px 1fr;
-        align-items: center;
-        margin: 40px 0px 0px 0px;
-    }
-
-    .logo__footer {
-        width: 160px;
-        padding: 0px 30px;
-    }
-    
-    .menu__footer ul {
-        display: flex;
-        gap: 3rem;
-    }
-    
-    .menu__footer li{
-        font-size: 1.1em;
-        }
-}
-
-@media (max-width:420px) {
-    body {
-        display: grid;
-        grid-template-rows: 110px auto 80px;
-        gap: 2.5rem;
-    }
-
-    header {
-        grid-row-start: 3;
-        background-color: #012626;
-        color: #FEF8DF;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        height: 80px;
-    }
-    
-    .bars {
-        display: block;
-        padding: 0px 20px;
-    }
-
-    .logo,
-    .menu {
-        display: none;
-    }
-
-    .home {
-        display: block;
-    }
-
-    .icons {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        gap: 6rem;
-        grid-column-start: 1;
-        font-size: 20px;
-        padding: 0px 50px;
-    }
-    
-    .user-menu__nav li {
-        font-size: 1.1em;
-    }
-
-    .user-menu__nav ul {
-        display: flex;
-        flex-direction: column;
-        background-color: #3E696D;
-        position: relative;
-        gap: 0.5rem;
-        border-radius: 0px 10px 10px 10px;
-        left: -170px;
-        top: -165px;
-    }
-
-    .shadow-drop, 
-    h {
-        font-size: 1.2em;
-        padding: 10px 0px 5px 40px;
-        margin: 30px 0px 0px 0px;
-    }
-
-    .continue-size {
-        width: 80px;
-    }
-
-    .continue-crop__img,
-    .continue__img {
-        height: 115px;
-        width: 90px;
-    }
-
-    .continue {
-        padding: 10px 0px 0px 60px;
-        gap: 1.5rem;
-    }
-
-    .options {
-        padding: 10px 0px 15px 60px;
-        gap: 0rem;
-    }
-
-    .options-size {
-        height: 50px;
-    }
-
-    .crop__img,
-    .img {
-        height: 88px;
-        width: 63px;
-    }
-
-    footer {
-        grid-row-start: 1;
-        display: flex;
-        gap: 6rem;
-        margin: 0px;
-    }
-
-    .casting {
-        display: block;
-        font-size: 1.5em;
-    }
-
-    .logo__footer {
-        width: 100px;
-        padding: 0px 30px;
-    }
-    
-    .menu__footer {
-        display: none;
-    }
 }

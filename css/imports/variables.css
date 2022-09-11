@@ -1,0 +1,11 @@
+:root {
+    --text-colour: #FEF8DF;
+    --cta-colour: #D0D1B8;
+    --cta-hover: #038C8C;
+    --background: #3E696D;
+    --dark-colour: #012626;
+
+    --cta-font: 'Monda';
+    --body-text: 'Fraunces';
+    --heading-link: 'Outfit';
+}

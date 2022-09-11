@@ -1,8 +1,10 @@
+@import "imports/variables.css";
+
 h1,
 h2,
 ul {
-    font-family: "Outfit", Verdana, Geneva, Tahoma, sans-serif;
-    color: #FEF8DF;
+    font-family: var(--heading-link), Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--text-colour);
 }
 
 h1,
@@ -13,15 +15,15 @@ h2 {
 }
 
 p {
-    font-family: 'Fraunces', Georgia, 'Times New Roman', Times, serif ;
-    color: #FEF8DF;
+    font-family: var(--body-text), Georgia, 'Times New Roman', Times, serif ;
+    color: var(--text-colour);
     max-width: 750px;
     font-size: clamp(0.8em, 3vw + 0.2em, 1.2em);
     padding: 0px 150px;
 }
 
 body {
-    background-color: #3E696D;
+    background-color: var(--background);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -40,7 +42,7 @@ main {
 }
 
 footer {
-    background-color: white;
+    background-color: #fff;
     display: grid;
     grid-template-columns: 250px 1fr;
     align-items: center;
@@ -71,7 +73,7 @@ a {
     }
 
 .colour__footer {
-    color: #012626;
+    color: var(--dark-colour);
 }
 
 @media (max-width:950px) {
@@ -111,5 +113,4 @@ a {
         gap: 0rem;
         padding: 0px;
     }
-
 }
