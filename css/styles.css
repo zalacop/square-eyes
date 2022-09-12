@@ -1,4 +1,5 @@
 @import "imports/variables.css";
+@import "imports/media.css";
 
 h2, 
 ul {
@@ -142,36 +143,38 @@ footer {
     width: 150px;
 }
 
-.continue-size {
-    width: 100px;
-    filter: drop-shadow(5px 5px 5px var(--dark-colour));
-}
-
-.continue__img,
 .continue-crop__img,
-.crop__img,
-.img {
+.continue__img,
+.img,
+.crop__img {
     border-radius: 0.8em;
     width: 100%;
 }
 
 .continue__img,
 .continue-crop__img {
-    height: 150px;
+    max-width: 150px;
+    min-width: 100px;
+    filter: drop-shadow(5px 5px 5px var(--dark-colour));
 }
 
 .continue-crop__img,
 .crop__img {
     object-fit: cover;
+    height: 222px;
 }
 
-.options-size {
-    width: 80px;
-}
-
+.img,
 .crop__img {
-    height: 118px; 
+    max-height: 170px;
+    min-height: 120px;
+    max-width: 120px;
+    min-width: 84px;
 }
+
+
+
+
 
 .logo__footer {
     width: 180px;
@@ -193,7 +196,7 @@ footer {
 
 .images img {
     height: 100%;
-    width: clamp(250px, 99vw, 800px);
+    max-width: clamp(250px, 99vw, 800px);
     border-radius: 20px;
     transition: all 0.3s ease;
 }
