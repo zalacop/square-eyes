@@ -7,16 +7,14 @@ ul {
     color: var(--text-colour);
 }
 
-h2 {
-    font-size: 1.2em;
-    margin: 10px;
-    padding: 30px 0px 5px 100px;
+li:hover {
+    text-decoration: underline;
 }
 
-.fa-regular,
-.fa-solid {
-    font-size: clamp(20px, 10vw + 2px, 30px);
-    cursor: pointer;
+h2 {
+    font-size: clamp(1.3em, 2.5vw, 1.8em);
+    margin: 10px;
+    /* padding: 30px 0px 5px 100px; */
 }
 
 body {
@@ -32,6 +30,8 @@ header {
 .fa-solid,
 .fa-regular {
     color: var(--cta-colour);
+    font-size: clamp(25px, 2vw, 35px);
+    cursor: pointer;
 }
 
 .home,
@@ -41,14 +41,14 @@ header {
 }
 
 .menu ul {
-    display: flex;
-    gap: 1rem;
+    display: grid;
+    grid-auto-flow: column;
+    padding: 0;
 }
 
 .menu li {
-    font-size: 1.2em;
+    font-size: clamp(1em, 1.5vw, 1.2em);
     font-weight: bold;
-    padding: 0px 60px;
 }
 
 nav li {
@@ -71,8 +71,6 @@ a {
 .icons {
     display: flex;
     gap: 3rem;
-    padding: 0px 50px 0px 0px;
-    height: 39px;
 } 
 
 .user-menu__nav,
@@ -99,19 +97,28 @@ a {
     gap: 0.5rem;
 }
 
-.continue,
-.options {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    margin: 10px;
-    padding: 10px 0px 0px 130px;
-}
-
 .shadow-drop {
-    font-size: 1.5em;
+    font-size: clamp(1.4em, 2.5vw, 2em);
     text-shadow: 5px 5px 5px var(--dark-colour);
 }
+
+.continue,
+.options {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+    align-items: center;
+    padding-left: clamp(60px, 10vw, 130px);
+}
+
+.continue {
+    grid-auto-columns: clamp(120px, 15vw, 150px);
+}
+
+.options {
+    grid-auto-columns: clamp(90px, 13vw, 120px);
+}
+
 
 footer {
     background-color: white;
@@ -131,8 +138,12 @@ footer {
 }
 
 .menu__footer li{
-    font-size: 1em;
-    }
+    font-size: clamp(0.8em, 3vw, 1em);
+}
+
+.menu__footer li:hover {
+    text-decoration: underline var(--dark-colour);
+}
 
 .colour__footer {
     color: var(--dark-colour);
@@ -140,7 +151,7 @@ footer {
 
 /* Images */
 .logo {
-    width: 150px;
+    width: clamp(120px, 20vw, 150px);
 }
 
 .continue-crop__img,
@@ -153,8 +164,6 @@ footer {
 
 .continue__img,
 .continue-crop__img {
-    max-width: 150px;
-    min-width: 100px;
     filter: drop-shadow(5px 5px 5px var(--dark-colour));
 }
 
@@ -167,17 +176,10 @@ footer {
 .img,
 .crop__img {
     max-height: 170px;
-    min-height: 120px;
-    max-width: 120px;
-    min-width: 84px;
 }
 
-
-
-
-
 .logo__footer {
-    width: 180px;
+    width: clamp(150px, 10vw, 180px);
     padding: 0px 50px;
 }
 
