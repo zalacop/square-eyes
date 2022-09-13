@@ -14,11 +14,12 @@ li:hover {
 h2 {
     font-size: clamp(1.3em, 2.5vw, 1.8em);
     margin: 10px;
-    /* padding: 30px 0px 5px 100px; */
+    padding-left: clamp(60px, 10vw, 100px);
 }
 
 body {
     background-color: var(--background);
+    max-width: 100%;
 }
 
 header {
@@ -41,9 +42,11 @@ header {
 }
 
 .menu ul {
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
     padding: 0;
+    max-width: 50vw;
 }
 
 .menu li {
@@ -109,6 +112,7 @@ a {
     gap: 1rem;
     align-items: center;
     padding-left: clamp(60px, 10vw, 130px);
+    margin-bottom: 25px;
 }
 
 .continue {
@@ -125,7 +129,6 @@ footer {
     display: grid;
     grid-template-columns: 250px 1fr;
     align-items: center;
-    margin: 40px 0px 0px 0px;
 }
 
 .casting {
@@ -173,9 +176,13 @@ footer {
     height: 222px;
 }
 
-.img,
 .crop__img {
+    height: 170px
+}
+
+.img {
     max-height: 170px;
+    min-height: 133px;
 }
 
 .logo__footer {

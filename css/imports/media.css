@@ -1,8 +1,4 @@
-@media (max-width:950px) {
-    h2 {
-        padding: 0px 0px 5px 80px;
-    }
-    
+@media (max-width:950px) {    
     header {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -20,7 +16,7 @@
         position: relative;
         left: -100px;
         top: 22px;
-        background-color: #3E696D;
+        background-color: var(--background);
         height: 94.5px;
         display: flex;
         flex-direction: column;
@@ -30,13 +26,15 @@
         height: 100px;
     }
 
-    .shadow-drop {
-        padding: 0 0 20px 80px;
+    .continue-crop__img,
+    .crop__img {
+        max-height: 190px;
     }
 
-    .continue {
-        padding-left: 90px;
+    .crop__img {
+        max-height: 143px;
     }
+
 
     footer {
         background-color: white;
@@ -59,22 +57,24 @@
 @media (max-width:420px) {
     body {
         display: grid;
-        grid-template-rows: 110px auto 80px;
-        gap: 2.5rem;
+        grid-auto-flow: row;
+        grid-template-rows: 150px 1fr 80px;
+        width: 100%;
+
     }
 
     header {
         grid-row-start: 3;
-        background-color: #012626;
-        color: #FEF8DF;
+        background-color: var(--dark-colour);
+        opacity: 70%;
+        color: var(--cta-colour) 0;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        height: 80px;
+        max-height: 80px;
     }
     
     .bars {
         display: block;
-        padding: 0px 20px;
     }
 
     .logo,
@@ -92,7 +92,6 @@
         justify-content: space-evenly;
         gap: 6rem;
         grid-column-start: 1;
-        /*font-size: 20px;*/
         padding: 0px 50px;
     }
     
@@ -103,7 +102,7 @@
     .user-menu__nav ul {
         display: flex;
         flex-direction: column;
-        background-color: #3E696D;
+        background-color: var(--background);
         position: relative;
         gap: 0.5rem;
         border-radius: 0px 10px 10px 10px;
@@ -111,48 +110,25 @@
         top: -165px;
     }
 
-    .shadow-drop, 
-    h2 {
-        font-size: 1.2em;
-        padding: 10px 0px 5px 40px;
-        margin: 30px 0px 0px 0px;
-    }
-
-    .continue-size {
-        width: 80px;
+    .continue,
+    .options {
+        overflow-x: auto;
     }
 
     .continue-crop__img,
-    .continue__img {
-        height: 115px;
-        width: 90px;
+    .crop__img {
+        max-height: 178px;
     }
 
-    .continue {
-        padding: 10px 0px 0px 60px;
-        gap: 1.5rem;
-    }
-
-    .options {
-        padding: 10px 0px 15px 60px;
-        gap: 0rem;
-    }
-
-    .options-size {
-        height: 50px;
-    }
-
-    .crop__img,
-    .img {
-        height: 88px;
-        width: 63px;
+    .crop__img {
+        max-height: 133px;
     }
 
     footer {
         grid-row-start: 1;
-        display: flex;
-        gap: 6rem;
-        margin: 0px;
+        max-height: 100px;
+        margin: 0;
+        padding: 0;
     }
 
     .casting {
@@ -161,11 +137,12 @@
     }
 
     .logo__footer {
-        width: 100px;
-        padding: 0px 30px;
+        max-width: 100px;
+       
     }
     
     .menu__footer {
         display: none;
     }
 }
+                   

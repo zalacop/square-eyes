@@ -1,0 +1,138 @@
+@import "imports/variables.css";
+@import "/css/styles.css";
+@import "/css/footer.css";
+
+h1 {
+    font-size: clamp(1.4em, 2.5vw, 1.8em);
+    padding: 0;
+    margin: 0 auto;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.movie {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: clamp(350px, 10vw, 400px);
+    max-width: 70%;
+    margin: 50px auto;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 0 auto;
+}
+
+.cta {
+    font-family: var(--cta-font);
+    font-size: 20px;
+    color: var(--dark-colour);
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: var(--cta-colour);
+    padding: 10px 65px;
+    margin: 0 auto;
+}
+
+.cta:hover {
+    background-color: var(--cta-hover);
+    color: var(--text-colour);
+    border: transparent;
+    filter: drop-shadow(5px 5px 5px var(--dark-colour));
+    margin: 0 auto;
+    padding: 10px 65px ;
+}
+
+.details {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: clamp(10px, 1vw, 12px);
+    align-content: center;
+    gap: 3rem;
+    margin-top: 20px;
+}
+
+.movie-icons {
+    display: flex;
+    gap: 7rem;
+}
+
+.fa-plus,
+.fa-star {
+    font-size: clamp(35px, 5vw + 2px, 50px);
+    margin: 50px 50px 0px 30px;
+}
+
+.price {
+    font-size: 15px;
+    background: var(--text-colour);
+    max-width: 65px;
+    padding: 5px;
+    color: var(--dark-colour);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -347px;
+}
+
+.poster-img {
+    width: clamp(180px, 20vw, 230px);
+    position: relative;
+}
+
+.description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin: 0 auto 50px auto;
+    gap: 3rem;
+    max-width: 80vw;
+}
+.description p {
+    font-size: 1em
+}
+
+.next {
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+
+.choice {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width:420px) {
+    .movie {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .poster {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: center;
+        filter: drop-shadow(5px 5px 5px var(--dark-colour));
+    }
+
+    .price {
+        top: -9px;
+        font-size: 10px;
+    }
+
+    .text h1 {
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+}
