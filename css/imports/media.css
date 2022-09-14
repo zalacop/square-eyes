@@ -59,8 +59,7 @@
         display: grid;
         grid-auto-flow: row;
         grid-template-rows: 150px 1fr 80px;
-        width: 100%;
-
+        width: 90%;
     }
 
     header {
@@ -83,7 +82,7 @@
     }
 
     .home {
-        display: block;
+        display: block;    
     }
 
     .icons {
@@ -97,22 +96,6 @@
     
     .user-menu__nav li {
         font-size: 1.1em;
-    }
-
-    .user-menu__nav ul {
-        display: flex;
-        flex-direction: column;
-        background-color: var(--background);
-        position: relative;
-        gap: 0.5rem;
-        border-radius: 0px 10px 10px 10px;
-        left: -170px;
-        top: -165px;
-    }
-
-    .continue,
-    .options {
-        overflow-x: auto;
     }
 
     .continue-crop__img,

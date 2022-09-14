@@ -1,0 +1,155 @@
+@import "imports/variables.css";
+
+body {
+    background-color: var(--background);
+    max-width: 100%;
+    margin: 0;
+}
+
+.logo {
+    width: clamp(120px, 20vw, 150px);
+}
+
+h1,
+h2, 
+ul {
+    font-family: var(--heading-link), Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--text-colour);
+}
+
+p {
+    font-family: var(--body-text), Georgia, 'Times New Roman', Times, serif ;
+    color: var(--text-colour);
+}
+
+li:hover {
+    text-decoration: underline;
+}
+
+header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 200px 1fr 150px;
+}
+
+.fa-solid,
+.fa-regular {
+    color: var(--cta-colour);
+    font-size: clamp(25px, 2vw, 35px);
+    cursor: pointer;
+}
+
+.home,
+.bars,
+.nav-menu {
+    display: none;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    padding: 0;
+    max-width: 50vw;
+}
+
+.menu li {
+    font-size: clamp(1em, 1.5vw, 1.2em);
+    font-weight: bold;
+}
+
+nav li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-colour);
+}
+
+.colour {
+    color: var(--cta-colour);
+}
+
+.active {
+    text-decoration: underline;
+}
+
+.icons {
+    display: flex;
+    gap: 3rem;
+} 
+
+.user-menu__nav,
+.user-menu {
+    display: none;
+}
+
+.user-menu__nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background);
+    color: var(--text-colour);
+    position: fixed;
+    right: 10px;
+    top: 55px;
+    padding: 0px 20px;
+    gap: 0.5rem;
+}
+
+.user-menu:checked ~ .user-menu__nav {
+    display: block;
+}
+
+footer {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    align-items: center;
+}
+
+.logo__footer {
+    width: clamp(150px, 10vw, 180px);
+    padding: 0px 50px;
+}
+
+.casting {
+    display: none;
+}
+
+.menu__footer ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu__footer li{
+    font-size: clamp(0.8em, 3vw, 1em);
+}
+
+.menu__footer li:hover {
+    text-decoration: underline var(--dark-colour);
+}
+
+.colour__footer {
+    color: var(--dark-colour);
+}
+
+@media (max-width:420px) {
+    .user-menu {
+        background: var(--background);
+    }
+    .user-menu__nav {
+        background: var(--background);
+    }
+    .user-menu__nav ul{
+        right: 0;
+        left: 0;
+        bottom: 80px;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        opacity: 100%;
+    }
+}

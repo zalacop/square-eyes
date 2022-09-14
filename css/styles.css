@@ -1,103 +1,11 @@
 @import "imports/variables.css";
+@import "imports/structure.css";
 @import "imports/media.css";
-
-h2, 
-ul {
-    font-family: var(--heading-link), Verdana, Geneva, Tahoma, sans-serif;
-    color: var(--text-colour);
-}
-
-li:hover {
-    text-decoration: underline;
-}
 
 h2 {
     font-size: clamp(1.3em, 2.5vw, 1.8em);
     margin: 10px;
     padding-left: clamp(60px, 10vw, 100px);
-}
-
-body {
-    background-color: var(--background);
-    max-width: 100%;
-}
-
-header {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 200px 1fr 150px;
-}
-
-.fa-solid,
-.fa-regular {
-    color: var(--cta-colour);
-    font-size: clamp(25px, 2vw, 35px);
-    cursor: pointer;
-}
-
-.home,
-.bars,
-.nav-menu {
-    display: none;
-}
-
-.menu ul {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 2rem;
-    padding: 0;
-    max-width: 50vw;
-}
-
-.menu li {
-    font-size: clamp(1em, 1.5vw, 1.2em);
-    font-weight: bold;
-}
-
-nav li {
-    display: inline-block;
-}
-
-a {
-    text-decoration: none;
-    color: var(--text-colour);
-}
-
-.colour {
-    color: var(--cta-colour);
-}
-
-.active {
-    text-decoration: underline;
-}
-
-.icons {
-    display: flex;
-    gap: 3rem;
-} 
-
-.user-menu__nav,
-.user-menu {
-    display: none;
-}
-
-.user-menu:checked ~ nav {
-    display: block;
-}
-
-.user-menu__nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--background);
-    color: var(--text-colour);
-    position: relative;
-    left: -110px;
-    top: 33px;
-    height: 116px;
-    padding: 0px 20px;
-    border-radius: 0px 10px 10px 10px;
-    gap: 0.5rem;
 }
 
 .shadow-drop {
@@ -123,38 +31,15 @@ a {
     grid-auto-columns: clamp(90px, 13vw, 120px);
 }
 
-
-footer {
-    background-color: white;
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    align-items: center;
-}
-
 .casting {
     display: none;
 }
 
-.menu__footer ul {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.menu__footer li{
-    font-size: clamp(0.8em, 3vw, 1em);
-}
-
-.menu__footer li:hover {
-    text-decoration: underline var(--dark-colour);
-}
-
-.colour__footer {
-    color: var(--dark-colour);
-}
-
 /* Images */
-.logo {
-    width: clamp(120px, 20vw, 150px);
+.continue,
+.options {
+   width: 75%;
+    overflow-x: auto;
 }
 
 .continue-crop__img,
@@ -185,11 +70,6 @@ footer {
     min-height: 133px;
 }
 
-.logo__footer {
-    width: clamp(150px, 10vw, 180px);
-    padding: 0px 50px;
-}
-
 /* Home page */
 .promotion {
     margin: 20px auto;
@@ -205,7 +85,7 @@ footer {
 
 .images img {
     height: 100%;
-    max-width: clamp(250px, 99vw, 800px);
+    width: clamp(250px, 99vw, 800px);
     border-radius: 20px;
     transition: all 0.3s ease;
 }
@@ -244,4 +124,18 @@ footer {
 
 #image3:checked ~ .img3 {
     margin-left: -200%;
+}
+
+@media (max-width:420px) {
+    .mobile {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .casting {
+        display: block;
+        color: var(--dark-colour);
+        background: transparent;
+        font-size: 1.5em;
+    }
 }

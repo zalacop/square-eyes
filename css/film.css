@@ -1,6 +1,6 @@
 @import "imports/variables.css";
-@import "/css/styles.css";
-@import "/css/footer.css";
+@import "imports/structure.css";
+@import "imports/media.css";
 
 h1 {
     font-size: clamp(1.4em, 2.5vw, 1.8em);
@@ -13,10 +13,24 @@ p {
     padding: 0;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .movie {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: clamp(350px, 10vw, 400px);
+    gap: 5rem;
     max-width: 70%;
     margin: 50px auto;
 }
@@ -42,7 +56,7 @@ p {
 .cta:hover {
     background-color: var(--cta-hover);
     color: var(--text-colour);
-    border: transparent;
+    border: 2px solid transparent;
     filter: drop-shadow(5px 5px 5px var(--dark-colour));
     margin: 0 auto;
     padding: 10px 65px ;
@@ -68,6 +82,11 @@ p {
     margin: 50px 50px 0px 30px;
 }
 
+.download,
+.share {
+    display: none;
+}
+
 .price {
     font-size: 15px;
     background: var(--text-colour);
@@ -89,10 +108,11 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 20px 10%;
     gap: 3rem;
     max-width: 80vw;
 }
+
 .description p {
     font-size: 1em
 }
@@ -110,11 +130,80 @@ p {
     margin: 0;
 }
 
+.options {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: clamp(90px, 13vw, 120px);
+    gap: 1rem;
+    align-items: center;
+    padding-left: clamp(60px, 10vw, 130px);
+    margin-bottom: 25px;
+}
+
+.img,
+.crop__img {
+    border-radius: 0.8em;
+    width: 100%;
+}
+
+.crop__img {
+    object-fit: cover;
+    height: 170px
+}
+
+.img {
+    max-height: 170px;
+    min-height: 133px;
+}
+
+@media (max-width:810px) {
+    .price {
+        top: -272px;
+    }
+    .description {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 20px;
+    }
+
+    .movie-icons {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .crop__img {
+        max-height: 165px;
+    }
+}
+
+@media (max-width:650px) {
+    .crop__img {
+        max-height: 146px;
+    }
+
+    .star {
+        display: block;
+    }
+}
+
 @media (max-width:420px) {
+    body {
+        display: grid;
+        grid-template-rows: 100px auto 80px;
+        max-width: 100%;
+    }
+
+    main {
+        gap: 2rem;
+    }
+
     .movie {
         display: flex;
         flex-direction: column-reverse;
-        gap: 2rem;
+        gap: 1rem;
     }
 
     .poster {
@@ -134,5 +223,29 @@ p {
         margin: 0 auto;
         padding: 0;
     }
-    
+
+    .text {
+        display: block;
+    }
+
+    .details {
+        justify-content: flex-end;
+        font-size: clamp(10px, 1vw, 12px);
+        gap: 1rem;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .download,
+    .share {
+        display: block;
+    }
+
+    .my-list {
+        display: none;
+    }
+
+    .crop__img {
+        max-height: 143px;
+    }
 }
