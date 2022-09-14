@@ -62,6 +62,18 @@ main {
     padding: 10px 65px ;
 }
 
+.poster {
+    display: grid;
+    grid-template-columns: 76px 77px 76px;
+    grid-template-rows: 23px 318px;
+}
+
+.price,
+.poster-img {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
 .details {
     display: flex;
     justify-content: space-evenly;
@@ -77,13 +89,15 @@ main {
 }
 
 .fa-plus,
-.fa-star {
+.fa-star,
+.fa-arrow-down,
+.fa-share {
     font-size: clamp(35px, 5vw + 2px, 50px);
-    margin: 50px 50px 0px 30px;
 }
 
 .download,
-.share {
+.share,
+.close-icon {
     display: none;
 }
 
@@ -93,15 +107,10 @@ main {
     max-width: 65px;
     padding: 5px;
     color: var(--dark-colour);
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: -347px;
 }
 
 .poster-img {
     width: clamp(180px, 20vw, 230px);
-    position: relative;
 }
 
 .description {
@@ -138,6 +147,8 @@ main {
     align-items: center;
     padding-left: clamp(60px, 10vw, 130px);
     margin-bottom: 25px;
+    width: 80%;
+    overflow-x: auto;
 }
 
 .img,
@@ -200,23 +211,48 @@ main {
         gap: 2rem;
     }
 
+    header,
+    footer {
+        display: none;
+    }
+
     .movie {
         display: flex;
         flex-direction: column-reverse;
         gap: 1rem;
+        margin: 10px auto;
     }
 
     .poster {
-        display: flex;
-        flex-direction: row;
-        align-items: baseline;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 180px 35px 30px;
+        grid-template-rows: 237px 30px;
+        margin-left: 30px;
+    }
+
+    .poster-img {
+        grid-row: span 2;
         filter: drop-shadow(5px 5px 5px var(--dark-colour));
     }
 
+    .fa-chromecast {
+        color: var(--cta-colour);
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+    
+    .fa-circle-xmark {
+        grid-column-start: 3;
+        margin-top: 10px;
+        margin-left: 18px;
+    }
+    
     .price {
-        top: -9px;
-        font-size: 10px;
+        grid-column-start: 2;
+        grid-row-start: 2;
+        grid-column-end: 4;
+        font-size: 13px;
+        filter: drop-shadow(5px 5px 5px var(--dark-colour));
     }
 
     .text h1 {
@@ -236,6 +272,8 @@ main {
         margin-bottom: 20px;
     }
 
+    .close-icon,
+    .casting,
     .download,
     .share {
         display: block;
@@ -245,7 +283,38 @@ main {
         display: none;
     }
 
+    .movie-icons {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 6rem;
+        margin-top: 30px;
+    }
+
+    .description {
+        padding: 0;
+        margin-top: 10px;
+    }
+
     .crop__img {
         max-height: 143px;
+    }
+}
+
+@media (max-width:320px) {
+    .poster {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .text {
+        margin: 0;
+    }
+    
+    .movie-icons {
+        gap: 4rem;
+    }
+
+    .description {
+        margin-top: 0;
     }
 }

@@ -127,6 +127,10 @@ h2 {
 }
 
 @media (max-width:420px) {
+    .promotion {
+        margin: 0 1%;
+    }
+
     .mobile {
         display: flex;
         justify-content: space-between;
@@ -138,4 +142,5 @@ h2 {
         background: transparent;
         font-size: 1.5em;
     }
+
 }
