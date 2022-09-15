@@ -1,4 +1,5 @@
 @import "imports/variables.css";
+@import "imports/media.css";
 
 h1,
 ul,
@@ -142,10 +143,13 @@ main {
     margin-left: 80px;
  }
  
-.hyperlink,
-.remember,
-.new {
+ .hyperlink {
     text-decoration: underline;
+ }
+
+ .hyperlink,
+ .remember,
+ .new {
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -212,7 +216,8 @@ footer {
 }
 
 .logo__footer {
-    width: 180px;
+    max-width: 180px;
+    min-width: 150px;
     padding: 0px 50px;
 }
 
@@ -237,3 +242,76 @@ a {
 .colour__footer {
     color: var(--dark-colour);
 }
+
+@media (max-width:850px) {
+    header,
+    footer {
+        filter: none;
+    }
+}
+
+@media (max-width:430px){
+    footer {
+        display: none;
+    }
+
+    header, 
+    body {
+        max-width: 430px;
+        min-width: 320px;
+    }
+
+    main {
+        margin-top: 10px;
+    }
+
+    header,
+    .logo {
+        display: flex;
+        max-height: 180px;
+    }
+
+    .log-in,
+    .sign-in {
+        background: var(--background);
+        box-shadow: none;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .forgotten {
+        font-size: 0.7em;
+        padding-left: 205px;
+    }
+
+    .cta {
+        margin-left: 100px;
+    }
+
+    .form {
+        max-width: 190px;
+        margin-left: 50px;
+    }
+
+    .cancel {
+        margin-left: 120px;
+    }
+
+    .fa-regular {
+        display: none;
+    }
+
+    .card-info,
+    .buttons {
+        margin: 0 15px;
+    }
+
+    .card-info {
+        max-width: 265px;
+    }
+
+    .buttons .code {
+        margin: 10px;
+    }
+}
+

@@ -1,0 +1,107 @@
+@import "imports/variables.css";
+@import "imports/structure.css";
+@import "imports/media.css";
+
+h1 {
+    font-size: clamp(1.5em, 5vw + 0.2em, 2.2em);
+    margin: 10px;
+    padding-top: 30px;
+}
+
+p,
+.hyperlink {
+    font-size: 0.9em;
+}
+
+h1, 
+.account {
+    padding-left: clamp(90px, 20vw, 220px);
+}
+
+.account {
+    background: var(--dark-colour);
+    filter: drop-shadow(5px 5px 5px var(--dark-colour));
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 200px 1fr 150px;
+    grid-template-rows: 30px repeat(3, 80px);
+}
+
+.membership {
+    grid-column-start: 1;
+}
+
+.user-name,
+.email-address,
+.password {
+    grid-column-start: 2;
+    display: grid;
+    grid-template-rows: 20px 20px;
+    gap: 5px;
+}
+
+.info {
+    margin-left: 20px;
+}
+
+.email-hyperlink,
+.password-hyperlink {
+    grid-column-start: 3;
+}
+
+
+.user-name {
+    grid-row-start: 2;
+}
+
+.email-address,
+.email-hyperlink {
+    grid-row-start: 3;
+}
+
+.password,
+.password-hyperlink {
+    grid-row-start: 4;
+}
+
+@media (max-width:420px) {
+    footer,
+    .membership,
+    .info {
+        display: none;
+    }
+
+    body {
+        max-width: 70%;
+    };
+
+    header {
+        max-width: 420px;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .account {
+        background: var(--background);
+        filter: none;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        gap: 1.2rem;
+    }
+
+    .email-address,
+    .password {
+        display: block;
+    }
+
+    .hyperlink {
+        padding-left: 15px;
+    }
+}

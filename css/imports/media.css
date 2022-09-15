@@ -35,7 +35,6 @@
         max-height: 143px;
     }
 
-
     footer {
         background-color: white;
         display: grid;
@@ -54,48 +53,81 @@
     }
 }
 
-@media (max-width:420px) {
+@media (max-width:810px) {
+    header, 
+    footer {
+        filter: none;
+    }
+
+    .menu__footer ul {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        margin: o;
+    }
+}
+
+@media (max-width:710px) {
+    .menu__footer ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:430px) {
     body {
         display: grid;
         grid-auto-flow: row;
         grid-template-rows: 150px 1fr 80px;
-        width: 90%;
+        max-width: 430px;
+        margin: 0;
     }
 
     header {
         grid-row-start: 3;
-        background-color: var(--dark-colour);
-        opacity: 70%;
+        background: rgba(1, 38, 38, .7);
         color: var(--cta-colour) 0;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         max-height: 80px;
+        max-width: 430px;
     }
     
-    .bars {
+    .bars,
+    .home,
+    .casting {
         display: block;
     }
 
     .logo,
-    .menu {
+    .menu,
+    .menu__footer {
         display: none;
-    }
-
-    .home {
-        display: block;    
     }
 
     .icons {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        gap: 6rem;
+        gap: 7rem;
         grid-column-start: 1;
         padding: 0px 50px;
     }
     
     .user-menu__nav li {
         font-size: 1.1em;
+        gap: 2rem;
+    }
+
+    .mobile {
+        display: flex;
+        gap: 7rem;
+    }
+
+    .casting {
+        color: var(--dark-colour);
+        font-size: 1.5em;
+        padding-right: 10%;
     }
 
     .continue-crop__img,
@@ -110,22 +142,12 @@
     footer {
         grid-row-start: 1;
         max-height: 100px;
+        max-width: 430px;
         margin: 0;
         padding: 0;
     }
 
-    .casting {
-        display: block;
-        font-size: 1.5em;
-    }
-
     .logo__footer {
         max-width: 100px;
-       
-    }
-    
-    .menu__footer {
-        display: none;
     }
 }
-                   
