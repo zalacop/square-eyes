@@ -1,3 +1,35 @@
 @import "imports/variables.css";
 @import "/css/form.css";
-@import "imports/structure.css"
+@import "imports/structure.css";
+@import "imports/media.css";
+
+header,
+footer {
+    filter: none;
+}
+
+header {
+    background: var(--background);
+}
+
+.logo {
+    width: clamp(120px, 20vw, 150px);
+    max-height: 85px;
+}
+
+.fa-user {
+   margin: 0;
+}
+
+@media (max-width:430px) {
+    header {
+        background: rgba(1, 38, 38, .9);
+        max-width: 430px;
+        padding: 0 10px;
+    }
+    
+    .fa-user {
+        display: block;
+    }
+
+}

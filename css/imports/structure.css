@@ -159,10 +159,11 @@ footer {
     }
     .user-menu__nav ul{
         background: rgba(1, 38, 38, .95);
-        right: 0;
+        max-width: 410px;
+        top: 625px;
         left: 0;
+        right: 0;
         bottom: 80px;
-        top: 720px;
         padding-left: 35px;
         margin: 0;
         justify-content: center;

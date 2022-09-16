@@ -11,23 +11,42 @@ h1 {
 p,
 .hyperlink {
     font-size: 0.9em;
+    margin: 0;
 }
 
 h1, 
 .account {
-    padding-left: clamp(90px, 20vw, 220px);
+    padding-left: clamp(60px, 20vw, 250px);
 }
 
 .account {
     background: var(--dark-colour);
     filter: drop-shadow(5px 5px 5px var(--dark-colour));
-    max-width: 60%;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 0 0 0 260px;
     padding: 20px;
     border-radius: 5px;
     display: grid;
-    grid-template-columns: 200px 1fr 150px;
+    grid-template-columns: 200px 550px;
     grid-template-rows: 30px repeat(3, 80px);
+}
+
+.email-address,
+.password {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0;
+}
+
+.account-details {
+    display: grid;
+    grid-template-columns: 380px 145px;
+}
+
+.email-hyperlink,
+.password-hyperlink {
+    margin-top: 20px;
 }
 
 .membership {
@@ -35,8 +54,8 @@ h1,
 }
 
 .user-name,
-.email-address,
-.password {
+.email-info,
+.password-info {
     grid-column-start: 2;
     display: grid;
     grid-template-rows: 20px 20px;
@@ -47,27 +66,46 @@ h1,
     margin-left: 20px;
 }
 
-.email-hyperlink,
-.password-hyperlink {
-    grid-column-start: 3;
-}
-
-
 .user-name {
     grid-row-start: 2;
 }
 
-.email-address,
-.email-hyperlink {
+.email-info {
     grid-row-start: 3;
 }
 
-.password,
-.password-hyperlink {
+.password-info {
     grid-row-start: 4;
 }
 
-@media (max-width:420px) {
+
+@media (max-width:1450px) {
+    .account {
+        margin: 0 auto;
+        grid-template-columns: 150px 490px;
+        max-width: 685px;
+    }
+
+    .account-details {
+        grid-template-columns: 340px 145px;
+    }
+
+}
+
+@media (max-width:1000px) {
+    .account {
+        grid-template-columns: 125px 400px;
+        grid-template-rows: 30px repeat(3, 70px);
+        max-width: 580px;
+    }
+
+    .account-details {
+        grid-template-columns: 285px 145px;
+    }
+}
+
+
+@media (max-width:430px) {
     footer,
     .membership,
     .info {
@@ -76,15 +114,15 @@ h1,
 
     body {
         max-width: 70%;
-    };
+    }
 
     header {
-        max-width: 420px;
+        max-width: 430px;
+        padding: 0 10px;
     }
 
     h1 {
-        display: flex;
-        justify-content: center;
+       margin-left: 60px;
     }
 
     .account {
@@ -94,6 +132,13 @@ h1,
         flex-direction: column;
         margin: 0;
         gap: 1.2rem;
+        font-size: 1.1em;
+    }
+
+    .account-details {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
     }
 
     .email-address,
