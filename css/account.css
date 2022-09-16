@@ -47,6 +47,7 @@ h1,
 .email-hyperlink,
 .password-hyperlink {
     margin-top: 20px;
+    text-decoration: underline;
 }
 
 .membership {
@@ -111,14 +112,8 @@ h1,
     .info {
         display: none;
     }
-
-    body {
-        max-width: 70%;
-    }
-
     header {
         max-width: 430px;
-        padding: 0 10px;
     }
 
     h1 {

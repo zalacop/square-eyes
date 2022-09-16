@@ -128,7 +128,7 @@ h2 {
 
 @media (max-width:430px) {
     .promotion {
-        margin: 0 1%;
+        margin: 0;
     }
 
     .casting {
@@ -137,35 +137,13 @@ h2 {
 
     .options,
     .continue {
-        max-width: 350px;
+        max-width: 330px;
     }
 }
 
 @media (max-width:350px) {
-    header, 
-    footer {
-        min-width: 350px;
-    }
-
-    .mobile {
-        display: flex;
-        gap: 5rem;
-    }
-
     .options,
     .continue {
         max-width: 250px;
     }
-}
-
-@media (max-width:320px) {
-    header,
-    footer {
-        max-width: 320px;
-    }
-
-    .icons {
-        gap: 5rem;
-    }
-
 }

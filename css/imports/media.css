@@ -8,22 +8,12 @@
         grid-column-start: 4;
     }
 
-    .user-menu__nav li {
-        font-size: 1.1em;
+    .user-menu__nav {
+        right: 50px;
     }
 
-    .user-menu ul {
-        position: relative;
-        left: -100px;
-        top: 22px;
-        background-color: var(--background);
-        height: 94.5px;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        padding: 0px 20px 0px 0px;
-        font-size: 0.9em;
-        height: 100px;
+    .user-menu__nav li {
+        font-size: 1.1em;
     }
 
     .continue-crop__img,
@@ -53,24 +43,48 @@
     }
 }
 
-@media (max-width:810px) {
+@media (max-width:800px) {
     header, 
     footer {
         filter: none;
     }
 
-    .menu__footer ul {
-        display: flex;
-        flex-direction: row;
-        gap: 0.5rem;
-        margin: o;
+    header {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .icons {
+        grid-column-start: 3;
+    }
+
+    .user-menu__nav ul {
+        right: 55px;
     }
 }
 
 @media (max-width:710px) {
+
+    .user-menu__nav ul {
+        right: 25px;
+        top: 40px;
+    }
+
     .menu__footer ul {
         display: flex;
         flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width:650px) {
+    .user-menu__nav {
+        right: 10px;
+    }
+}
+
+@media (max-width:620px) {
+    .user-menu__nav ul {
+        right: 0px;
     }
 }
 
@@ -87,11 +101,11 @@
         grid-row-start: 3;
         background: rgba(1, 38, 38, .7);
         color: var(--cta-colour) 0;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
         max-height: 80px;
-        max-width: 430px;
-        padding: 0 10px;
+        width: clamp(320px, 100vw, 430px);
+        padding-top: 25px;
+        margin: 0;
+        display: block;
     }
     
     .bars,
@@ -108,11 +122,26 @@
 
     .icons {
         display: flex;
-        flex-direction: row;
+        align-items: center;
         justify-content: space-evenly;
-        gap: 7rem;
-        grid-column-start: 1;
-        padding: 0px 50px;
+    }
+
+    .user-menu {
+        background: none;
+    }
+
+    .user-menu__nav ul{
+        background: rgba(1, 38, 38, .95);
+        top: 750px;
+        left: 0;
+        right: 0;
+        bottom: 80px;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        border-radius: 10px 10px 0 0 ;
     }
     
     .user-menu__nav li {
@@ -143,7 +172,7 @@
     footer {
         grid-row-start: 1;
         max-height: 100px;
-        max-width: 430px;
+        width: clamp(320px, 100vw, 430px);
         margin: 0;
         padding: 0;
     }
@@ -152,3 +181,4 @@
         max-width: 100px;
     }
 }
+
