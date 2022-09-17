@@ -1,5 +1,6 @@
 @import "imports/variables.css";
 @import "imports/structure.css";
+@import "imports/media.css";
 
 h1 {
     font-size: clamp(1.4em, 2.5vw, 1.8em);
@@ -166,21 +167,6 @@ main {
     min-height: 133px;
 }
 
-@media (min-width:1450px) {
-    .movie {
-        margin-left: 430px;
-    }
-
-    .description,
-    .next {
-        margin-left: 145px;
-    }
-
-    .description {
-        max-width: 1100px;
-    }
-}
-
 @media (max-width:810px) {
     .description {
         display: flex;
@@ -201,6 +187,13 @@ main {
     }
 }
 
+@media (max-width:750px) {
+    .cta {
+        font-size: 1.1em;
+        padding: 10px 45px;
+    }
+}
+
 @media (max-width:650px) {
     .crop__img {
         max-height: 146px;
@@ -211,26 +204,11 @@ main {
     }
 }
 
-@media (max-width:430px) {
-    body {
-        display: grid;
-        grid-template-rows: 100px auto 80px;
-        max-width: 100%;
-    }
-
-    main {
-        gap: 2rem;
-    }
-
-    header,
-    footer {
-        display: none;
-    }
-
+@media (max-width:550px) {
     .movie {
         display: flex;
         flex-direction: column-reverse;
-        gap: 1rem;
+        gap: 0rem;
         margin: 10px auto;
     }
 
@@ -284,6 +262,35 @@ main {
         margin-bottom: 20px;
     }
 
+    .cta {
+        font-size: 20px;
+        padding: 10px 65px;
+    }
+    
+    .movie-icons {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 6rem;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width:430px) {
+    body {
+        display: grid;
+        grid-template-rows: 100px auto 80px;
+        max-width: 100%;
+    }
+
+    main {
+        gap: 2rem;
+    }
+
+    header,
+    footer {
+        display: none;
+    }
+
     .close-icon,
     .casting,
     .download,
@@ -293,13 +300,6 @@ main {
 
     .my-list {
         display: none;
-    }
-
-    .movie-icons {
-        display: grid;
-        grid-auto-flow: column;
-        gap: 6rem;
-        margin-top: 30px;
     }
 
     .description {
