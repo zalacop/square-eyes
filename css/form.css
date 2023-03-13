@@ -188,6 +188,14 @@ main {
     border: none;
 }
 
+.log a {
+    color: var(--dark-colour);
+}
+
+.log a:hover {
+    color: var(--body-text);
+}
+
 .payment {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -197,6 +205,10 @@ main {
 .code {
     max-width: 180px;
     margin: 0px 180px;
+}
+
+.confirm {
+    margin: 0px 20px;
 }
 
 .cancel {

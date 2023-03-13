@@ -31,10 +31,6 @@ h2 {
     grid-auto-columns: clamp(90px, 13vw, 120px);
 }
 
-.casting {
-    display: none;
-}
-
 /* Images */
 .continue,
 .options {
@@ -42,27 +38,14 @@ h2 {
     overflow-x: auto;
 }
 
-.continue-crop__img,
 .continue__img,
-.img,
-.crop__img {
+.img {
     border-radius: 0.8em;
     width: 100%;
 }
 
-.continue__img,
-.continue-crop__img {
+.continue__img {
     filter: drop-shadow(5px 5px 5px var(--dark-colour));
-}
-
-.continue-crop__img,
-.crop__img {
-    object-fit: cover;
-    height: 222px;
-}
-
-.crop__img {
-    height: 170px
 }
 
 .img {
@@ -129,10 +112,6 @@ h2 {
 @media (max-width:430px) {
     .promotion {
         margin: 0;
-    }
-
-    .casting {
-        display: block;
     }
 
     .options,

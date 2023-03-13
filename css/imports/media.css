@@ -31,15 +31,6 @@
         font-size: 1.1em;
     }
 
-    .continue-crop__img,
-    .crop__img {
-        max-height: 190px;
-    }
-
-    .crop__img {
-        max-height: 143px;
-    }
-
     footer {
         background-color: white;
         display: grid;
@@ -104,10 +95,6 @@
         right: 10px;
     }
 
-    .crop__img {
-        max-height: 146px;
-    }
-
     .star {
         display: block;
     }
@@ -140,8 +127,7 @@
     }
     
     .bars,
-    .home,
-    .casting {
+    .home {
         display: block;
     }
 
@@ -183,21 +169,6 @@
     .mobile {
         display: flex;
         gap: 7rem;
-    }
-
-    .casting {
-        color: var(--dark-colour);
-        font-size: 1.5em;
-        padding-right: 10%;
-    }
-
-    .continue-crop__img,
-    .crop__img {
-        max-height: 178px;
-    }
-
-    .crop__img {
-        max-height: 133px;
     }
 
     footer {
