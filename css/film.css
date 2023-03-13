@@ -26,6 +26,10 @@ main {
     justify-content: space-between;
 }
 
+.fa-circle-xmark {
+    display: none;
+}
+
 .movie {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -223,19 +227,6 @@ main {
         grid-row: span 2;
         filter: drop-shadow(5px 5px 5px var(--dark-colour));
     }
-
-    .fa-chromecast {
-        color: var(--cta-colour);
-        margin-top: 15px;
-        margin-left: 15px;
-        font-size: 25px;
-    }
-    
-    .fa-circle-xmark {
-        grid-column-start: 3;
-        margin-top: 10px;
-        margin-left: 18px;
-    }
     
     .price {
         grid-column-start: 2;
@@ -290,9 +281,12 @@ main {
     footer {
         display: none;
     }
-
-    .close-icon {
+      
+    .fa-circle-xmark {
         display: block;
+        grid-column-start: 3;
+        margin-top: 10px;
+        margin-left: 18px;
     }
 
     .description {
