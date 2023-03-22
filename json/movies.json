@@ -1,0 +1,98 @@
+[
+    {
+        "id": "fastFuriousPresentsHobbsShaw",
+        "name": "Fast & Furious Presents: Hobbs & Shaw",
+        "genre": ["Comedy", "Action"],
+        "watching": false,
+        "myList": true,
+        "year": 2019,
+        "time": "2h 17min",
+        "description": "Brixton Lorr is a cybernetically enhanced soldier who possesses superhuman strength, a brilliant mind and a lethal pathogen that could wipe out half of the world's population. It's now up to hulking lawman Luke Hobbs and lawless.",
+        "cast": ["Dwayne Johnson", "Jason Statham", "Idris Elba", "Vanessa Kirby", "Dame Helen Mirren", "Eiza González"],
+        "image": "/images/Square_Eyes_Cover1.jpg"
+    },
+    {
+        "id": "godzillaKingOfTheMonsters",
+        "name": "Godzilla: King of the Monsters",
+        "genre": ["Sci-Fi", "Action"],
+        "watching": true,
+        "myList": false,
+        "year": 2019,
+        "time": "2h 12min",
+        "description": "Members of the crypto-zoological agency Monarch face off against a battery of god-sized monsters, including the mighty Godzilla, who collides with Mothra, Rodan, and his ultimate nemesis, the three-headed King Ghidorah. When these ancient super-species-thought to be mere myths-rise again, they all vie for supremacy, leaving humanity's very existence hanging in the balance.",
+        "cast": ["Kyle Chandler", "Vera Farmiga", "Millie Bobby Brown", "Ken Watanabe", "Zhang Ziyi", "Bradley Whitford"],
+        "image": "/images/Square_Eyes_Cover2.jpg"
+    },
+    {
+        "id": "onceUponATimeInHollywood",
+        "name": "Once Upon a Time... in Hollywood",
+        "genre": ["Comedy", "Drama"],
+        "watching": true,
+        "myList": true,
+        "year": 2019,
+        "time": "2h 51min",
+        "description": "Actor Rick Dalton gained fame and fortune by starring in a 1950s television Western, but is now struggling to find meaningful work in a Hollywood that he doesn't recognize anymore. He spends most of his time drinking and palling around with Cliff Booth, his easygoing best friend and longtime stunt double. Rick also happens to live next door to Roman Polanski and Sharon Tate -- the filmmaker and budding actress whose futures will forever be altered by members of the Manson Family.",
+        "cast": ["Leonardo DiCaprio", "Brad Pitt", "Margot Robbie", "Margaret Qualley", "Kurt Russell", "Dakota Fanning", "Damon Herriman"],
+        "image": "/images/Square_Eyes_Cover3.jpg"
+    },
+    {
+        "id": "scream",
+        "name": "Scream",
+        "genre": ["Horror", "Action"],
+        "watching": false,
+        "myList": false,
+        "year": 2022,
+        "time": "1h 54min",
+        "description": "25 years after a streak of brutal murders shocked the quiet town of Woodsboro, Calif., a new killer dons the Ghostface mask and begins targeting a group of teenagers to resurrect secrets from the town's deadly past.",
+        "cast": ["Neve Campbell", "Courteney Cox", "David Arquette", "Melissa Barrera", "Mikey Madison", "Mason Gooding", "Kyle Gallner"],
+        "image": "/images/Square_Eyes_Cover4.jpg"
+    },
+    {
+        "id": "sweetheart",
+        "name": "Sweetheart",
+        "genre": ["Horror", "Action"],
+        "watching": false,
+        "myList": false,
+        "year": 2019,
+        "time": "1h 22min",
+        "description": "Jenn has washed ashore a small tropical island and it doesn't take her long to realize she's completely alone. She must spend her days not only surviving the elements, but must also fend off the malevolent force that comes out each night.",
+        "cast": ["Emory Cohen", "Kiersey Clemons", "Hanna Mangan Lawrence"],
+        "image": "/images/Square_Eyes_Cover5.jpg"
+    },
+    {
+        "id": "theAddamsFamily",
+        "name": "The Addams Family",
+        "genre": ["Animated", "Comedy"],
+        "watching": false,
+        "myList": true,
+        "year": 2019,
+        "time": "1h 26min",
+        "description": "Members of the mysterious and spooky Addams family -- Gomez, Morticia, Pugsley, Wednesday, Uncle Fester and Grandma -- are readily preparing for a visit from their even creepier relatives. But trouble soon arises when shady TV personality Margaux Needler realizes that the Addams' eerie hilltop mansion is standing in the way of her dream to sell all the houses in the neighborhood.",
+        "cast": ["Oscar Isaac", "Charlize Theron", "Chloë Grace Moretz", "Finn Wolfhard", "Nick Kroll", "Snoop Dogg"],
+        "image": "/images/Square_Eyes_Cover6.jpg"
+    },
+    {
+        "id": "theBatman",
+        "name": "The Batman",
+        "genre": ["Drama", "Action"],
+        "watching": false,
+        "myList": false,
+        "year": 2022,
+        "time": "2h 56min",
+        "description": "Batman ventures into Gotham City's underworld when a sadistic killer leaves behind a trail of cryptic clues. As the evidence begins to lead closer to home and the scale of the perpetrator's plans become clear, he must forge new relationships, unmask the culprit and bring justice to the abuse of power and corruption that has long plagued the metropolis.",
+        "cast": ["Robert Pattinson", "Zoë Kravitz", "Jeffrey Wright", "Colin Farrell", "Paul Dano", "John Turturro"],
+        "image": "/images/Square_Eyes_Cover7.jpg"
+    },
+    {
+        "id": "toyStory4",
+        "name": "Toy Story 4",
+        "genre": ["Animated", "Comedy"],
+        "watching": true,
+        "myList": false,
+        "year": 2019,
+        "time": "1h 40min",
+        "description": "Woody, Buzz Lightyear and the rest of the gang embark on a road trip with Bonnie and a new toy named Forky. The adventurous journey turns into an unexpected reunion as Woody's slight detour leads him to his long-lost friend Bo Peep. As Woody and Bo discuss the old days, they soon start to realize that they're worlds apart when it comes to what they want from life as a toy.",
+        "cast": ["Tom Hanks", "Tim Allen", "Annie Potts", "Tony Hale", "Keegan - Michael Key", "Madeleine McGraw"],
+        "image": "/images/Square_Eyes_Cover8.jpg"
+    }
+]

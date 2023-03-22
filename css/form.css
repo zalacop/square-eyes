@@ -42,7 +42,7 @@ header {
 }
 
 .logo {
-    height: 180px;
+    max-height: 180px;
 }
 
 main {
@@ -267,12 +267,6 @@ a {
         display: none;
     }
 
-    header, 
-    body {
-        max-width: 430px;
-        min-width: 320px;
-    }
-
     main {
         margin-top: 10px;
     }
@@ -280,7 +274,6 @@ a {
     header,
     .logo {
         display: flex;
-        max-height: 180px;
     }
 
     .log-in,

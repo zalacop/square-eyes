@@ -24,7 +24,7 @@ h2 {
 }
 
 .continue {
-    grid-auto-columns: clamp(120px, 15vw, 150px);
+    grid-auto-columns: clamp(120px, 15vw, 200px);
 }
 
 .options {
@@ -35,7 +35,7 @@ h2 {
 .continue,
 .options {
    width: 70%;
-    overflow-x: auto;
+   overflow-x: auto;
 }
 
 .continue__img,
@@ -55,8 +55,8 @@ h2 {
 
 /* Home page */
 .promotion {
-    margin: 20px auto;
-    max-width: clamp(250px, 99vw, 800px);
+    margin: 10% auto;
+    max-width: clamp(250px, 99vw, 1100px);
     overflow: hidden;
 }
 
@@ -68,7 +68,7 @@ h2 {
 
 .images img {
     height: 100%;
-    width: clamp(250px, 99vw, 800px);
+    width: clamp(250px, 99vw, 1100px);
     border-radius: 20px;
     transition: all 0.3s ease;
 }
@@ -112,11 +112,6 @@ h2 {
 @media (max-width:430px) {
     .promotion {
         margin: 0;
-    }
-
-    .options,
-    .continue {
-        max-width: 330px;
     }
 }
 
