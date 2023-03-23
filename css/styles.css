@@ -46,7 +46,9 @@ h2 {
 }
 
 .continue__img {
-    filter: drop-shadow(5px 5px 5px var(--dark-colour));
+    filter: drop-shadow(15px 5px 5px var(--dark-colour));
+    padding: 10px;
+    border-radius: 1.5em;
 }
 
 .img {
