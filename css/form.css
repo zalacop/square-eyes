@@ -87,36 +87,8 @@ main {
 
 .form__label,
 .form__label-password {
-    position: absolute;
-    left: 1rem;
-    top: 1.2rem;
-    padding: 0 0.5rem;
-    opacity: 50%;
-    cursor: text;
-    transition: top 200ms ease-in, 
-                left 200ms ease-in;    
-}
-
-.form__label-password {
-    margin: 0 auto;
-}
-
-.form__input:focus ~ .form__label,
-.form__input:not(:placeholder-shown).form__input:not(:focus)  ~ .form__label{
-    top: -1.2rem;
-    font-size: 0.8rem;
-    left: 0.6rem;
-    opacity: 100%;
-    font-family: inherit;
-    color: inherit;
-    font-family: var(--body-text);
     color: var(--text-colour);
 }
-
- .form__input:focus ~ .form__label-password,
- .form__input:not(:placeholder-shown).form__input:not(:focus)  ~ .form__label-password {
-    display: none;
- }
 
  #remember,
  #terms-conditions {
@@ -260,9 +232,33 @@ a {
     footer {
         filter: none;
     }
+
+    .log-in,
+    .sign-in {
+        background: var(--background);
+        box-shadow: none;
+        max-width: 450px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .forgotten {
+        width: 150px;
+        padding-left: 320px;
+    }
+
 }
 
-@media (max-width:430px){
+@media (max-width:465px) {
+    .forgotten {
+        font-size: 0.7em;
+        padding-left: 300px;
+    }
+}
+
+@media (max-width:430px) {
     footer {
         display: none;
     }
@@ -278,11 +274,9 @@ a {
 
     .log-in,
     .sign-in {
-        background: var(--background);
-        box-shadow: none;
-        max-width: 320px;
-        margin: 0 auto;
+        margin: 0 10%;
     }
+
 
     .forgotten {
         font-size: 0.7em;

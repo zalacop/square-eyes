@@ -204,6 +204,7 @@ main {
     .poster-img {
         grid-row: span 2;
         filter: drop-shadow(5px 5px 5px var(--dark-colour));
+        margin: 0 13%;
     }
 
     .text h1 {

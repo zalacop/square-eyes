@@ -117,6 +117,7 @@ a {
     padding: 10px 20px;
     gap: 0.5rem;
     border-radius: 10px;
+    padding: 20px;
 }
 
 .user-menu:checked ~ .user-menu__nav {
