@@ -28,7 +28,6 @@ async function findMovie(movieId) {
 // accessing html content
 const movie = document.querySelector(".movie");
 const movieDescription = document.querySelector(".description");
-const whatNext = document.querySelector(".what__next");
 
 
 // getting the chosen movie
@@ -46,23 +45,18 @@ async function getMovie() {
 
     // creating html for the chosen movie
     movie.innerHTML = `<div class="text">
-    <h1>${movie2.name}</h1>
-    <div class="details">
-        <p>${genre}</p>
-        <p>${movie2.year}</p>
-        <p>${movie2.time}</p>
-    </div>
-    <button class="cta log"><a href="/user/payment.html">Buy Now 169 NOK</a></button>
-    <div class="movie-icons">
-        <div class="my-list">
-        <i class="fa-regular fa-plus"></i>
-        </div>
-        <div class="star">
-        <i class="fa-regular fa-star"></i>
-        </div>
-    </div>
-    </div>
-    </div>
+                        <h1>${movie2.name}</h1>
+                        <div class="details">
+                            <p>${genre}</p>
+                            <p>${movie2.year}</p>
+                            <p>${movie2.time}</p>
+                        </div>
+                        <a href="/user/payment.html"><button class="cta log">Buy Now 169 NOK</button></a>
+                        <div class="movie-icons">
+                            <div class="my-list"><i class="fa-regular fa-plus"></i></div>
+                            <div class="star"><i class="fa-regular fa-star"></i></div>
+                        </div>
+                      </div>
     <div class="poster">
         <img src="${movie2.image}" alt="Poster for ${movie2.name}" class="poster-img"/>
         <div class="close-icon">
@@ -72,9 +66,5 @@ async function getMovie() {
 
     movieDescription.innerHTML = `<p>${movie2.description}</p>
     <p>Cast: ${cast}</p>`;
-
-    whatNext.innerHTML = `<div><img src="/images/Square_Eyes_Cover1.jpg" alt="Poster for Fast and Furious: Hobbs" class="img"/></div>
-  <div><img src="/images/Square_Eyes_Cover3.jpg" alt="Poster for Once Upon a Time in Hollywood" class="img"/></div>
-  <div><img src="/images/Square_Eyes_Cover6.jpg" alt="Poster for The Addams Family: Halloween" class="img"/></div>`;
 }
 getMovie();
