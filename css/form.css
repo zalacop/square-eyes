@@ -154,9 +154,10 @@ main {
 }
 
 .code, 
-.cta:hover {
+.cta:hover,
+.code a {
     background-color: var(--cta-hover);
-    color: var(--text-colour);
+    color: var(--dark-colour);
     border: none;
 }
 

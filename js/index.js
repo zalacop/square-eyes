@@ -22,7 +22,7 @@ async function getMovies() {
         // adding continue watching section
         if (movies[i].watching === true) {
             continueContainer.innerHTML += `
-            <div><img src="${movies[i].image}" alt="Poster for ${movies[i].name}" class="continue__img" /></div>`;
+            <div><a href="/films/watch.html"><img src="${movies[i].image}" alt="Poster for ${movies[i].name}" class="continue__img" /></a></div>`;
         }
 
         // adding my list section 

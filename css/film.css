@@ -59,7 +59,7 @@ main {
 
 .cta:hover {
     background-color: var(--cta-hover);
-    color: var(--text-colour);
+    color: var(--dark-colour);
     border: 2px solid transparent;
     filter: drop-shadow(5px 5px 5px var(--dark-colour));
     margin: 0 auto;
