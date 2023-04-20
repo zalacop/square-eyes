@@ -59,7 +59,7 @@ h2 {
 /* Home page */
 .promotion {
     margin: 10% auto;
-    max-width: clamp(250px, 99vw, 1100px);
+    max-width: clamp(150px, 99vw, 500px);
     overflow: hidden;
 }
 
@@ -71,7 +71,7 @@ h2 {
 
 .images img {
     height: 100%;
-    width: clamp(250px, 99vw, 1100px);
+    width: clamp(150px, 99vw, 500px);
     border-radius: 20px;
     transition: all 0.3s ease;
 }

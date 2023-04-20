@@ -5,15 +5,19 @@ const horrorContainer = document.querySelector(".horror");
 const comedyContainer = document.querySelector(".comedy");
 const dramaContainer = document.querySelector(".drama");
 const actionContainer = document.querySelector(".action");
+const promotionsContainer = document.querySelector(".images");
 
 
 //creating the API url (http://localhost:10004/wp-json/wc/store/products)
 
 const localHost = "http://localhost:10004";
 const woocommerce = "/wp-json/wc/store";
-const products ="/products"; 
+const products = "/products"; 
+const featured = "?featured=true";
 
 const url = localHost + woocommerce + products;
+const featuredURL = url + featured; 
+
 
 
 async function getMovies() {
@@ -21,6 +25,26 @@ async function getMovies() {
    // fetching the JSON and catching error message
    
    try {
+
+    // adding featured section
+    const featuredResonse = await fetch(featuredURL);
+    const featuredMovies = await featuredResonse.json();
+    console.log(featuredMovies);
+    for (let f = 0; f < featuredMovies.length; f++) {
+        console.log(featuredMovies[f].name);
+
+        // adding featured/promotions html
+        promotionsContainer.innerHTML = `       <input type="radio" name="slide" id="image1" checked>
+        <input type="radio" name="slide" id="image2">
+        <input type="radio" name="slide" id="image3">
+        
+        <img src="${featuredMovies[0].images[0].src}" alt="Poster for ${featuredMovies[0].name}" class="img1" />
+        <img src="${featuredMovies[1].images[0].src}" alt="Poster for ${featuredMovies[1].name}" class="img2" />
+        <img src="${featuredMovies[2].images[0].src}" alt="Poster for ${featuredMovies[2].name}" class="img3" />`
+
+    }
+
+    // adding content to home page
     const response = await fetch(url);
     const movies = await response.json();
 
