@@ -70,9 +70,11 @@ const movieDescriptionContainer = document.querySelector(".description");
 // getMovie();
 
 
-const localHost = "http://localhost:10004";
+const localHost = "https://www.square-eyes-z91.no/";
 const woocommerce = "/wp-json/wc/store";
-const products ="/products/"; 
+const products = "/products"; 
+const consumerKey = "ck_68bcdb5809a7ef0e264c3fb000e5a203fa28f662";
+const consumerSecret = "cs_57a55410e81b8cb6da07582ba6a508627ebbc75e";
 
 // adding a variable to href value, retrieving it from the query string and using it in an api call
 const queryString = document.location.search;
@@ -81,7 +83,7 @@ const id = params.get("movie");
 
 console.log(id);
 
-const url = localHost + woocommerce + products + id;
+const url = localHost + woocommerce + products + "/" + id + "?" + consumerKey+ "&" + consumerSecret;
 
 // finding the chosen movie 
 async function findMovie() {
@@ -100,6 +102,10 @@ async function findMovie() {
         const genres = [movies.categories[0].name, movies.categories[1].name];
         const genre = genres.join(", ");
         console.log(genre);
+
+        // getting the price 
+        const price = movies.prices.price/100;
+        console.log(price);
 
         const attributes = movies.attributes;
 
@@ -127,7 +133,7 @@ async function findMovie() {
                                 <p>${year}</p>
                                 <p>${time}</p>
                             </div>
-                            <a href="/user/payment.html"><button class="cta log">Buy Now 169 NOK</button></a>
+                            <a href="/user/payment.html"><button class="cta log">Buy Now ${price} NOK</button></a>
                             <div class="movie-icons">
                                 <div class="my-list"><i class="fa-regular fa-plus"></i></div>
                                 <div class="star"><i class="fa-regular fa-star"></i></div>
