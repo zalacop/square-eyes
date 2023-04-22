@@ -8,6 +8,28 @@ h2 {
     padding-left: clamp(60px, 10vw, 100px);
 }
 
+.error_message {
+    color: darkred;
+    font-size: 30px;
+    text-decoration:underline;
+    text-transform: uppercase;
+    max-width: 500px;
+}
+
+.loading {
+    height: 100px;
+    width: 100px;
+    border: 20px dashed var(--cta-hover);
+    border-radius: 50%;
+    animation: spin 1.8s ease-in infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .shadow-drop {
     font-size: clamp(1.4em, 2.5vw, 2em);
     text-shadow: 5px 5px 5px var(--dark-colour);

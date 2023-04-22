@@ -6,6 +6,7 @@ const comedyContainer = document.querySelector(".comedy");
 const dramaContainer = document.querySelector(".drama");
 const actionContainer = document.querySelector(".action");
 const promotionsContainer = document.querySelector(".images");
+const promotionsNavContainer = document.querySelector(".navigation-manual");
 
 // accessing html content on movie page 
 const nextContainer = document.querySelector(".what_next");
@@ -46,6 +47,10 @@ async function getMovies() {
             <img src="${featuredMovies[0].images[0].src}" alt="Poster for ${featuredMovies[0].name}" class="img1" />
             <img src="${featuredMovies[1].images[0].src}" alt="Poster for ${featuredMovies[1].name}" class="img2" />
             <img src="${featuredMovies[2].images[0].src}" alt="Poster for ${featuredMovies[2].name}" class="img3" />`
+            
+            promotionsNavContainer.innerHTML = `<label for="image1"></label>
+            <label for="image2"></label>
+            <label for="image3"></label>`;
         }
     }
 
@@ -109,8 +114,9 @@ async function getMovies() {
         }
   
     }
-   } catch(error) {
+   } catch(error) { // catching if an error occours
     console.log(error);
+    continueContainer.innerHTML = errorMessage();// displaying error message
     }
 }
 

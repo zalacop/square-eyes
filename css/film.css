@@ -26,6 +26,29 @@ main {
     justify-content: space-between;
 }
 
+.error_message {
+    color: darkred;
+    font-size: 30px;
+    text-decoration:underline;
+    text-transform: uppercase;
+    max-width: 500px;
+}
+
+.loading {
+    height: 80px;
+    width: 80px;
+    border: 20px dashed var(--cta-hover);
+    border-radius: 50%;
+    animation: spin 1.8s ease-in infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
 .fa-circle-xmark {
     display: none;
 }

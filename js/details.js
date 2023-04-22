@@ -94,8 +94,18 @@ async function findMovie() {
         const movieDescription = movies.description;
         console.log(movieDescription);
 
-        // adding name property to the title
-        const newTitle = movieName; 
+        // adding name property to the title and fixed encoding 
+        const title = movieName;
+        function removeOuterTags(inputString) {
+            const parser = new DOMParser();
+            const getTitle = parser.parseFromString(inputString, "text/html");
+            return getTitle.body.innerText;
+        }
+
+        const inputString = `<p>${title}</p>`;
+        const newTitle = removeOuterTags(inputString);
+        console.log(newTitle);
+
         document.title = newTitle;
 
         // creating the genre array and joining it
@@ -150,8 +160,9 @@ async function findMovie() {
         <p>Cast: ${cast}</p>`;
 
 
-    } catch(error) {
+    } catch(error) { // catching if an error occours
         console.log(error);
+        movieContainer.innerHTML = errorMessage(); // displaying error message
     }
 }
 
