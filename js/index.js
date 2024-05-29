@@ -1,3 +1,86 @@
+// Accessing HTML content
+const continueContainer = document.querySelector(".continue");
+const myListContainer = document.querySelector(".my-list");
+const horrorContainer = document.querySelector(".horror");
+const comedyContainer = document.querySelector(".comedy");
+const dramaContainer = document.querySelector(".drama");
+const actionContainer = document.querySelector(".action");
+const promotionsContainer = document.querySelector(".images");
+const promotionsNavContainer = document.querySelector(".navigation-manual");
+
+// Local JSON file paths
+const localJSONPath = "/json/movies.json";
+
+async function getMovies() {
+    try {
+        // Fetching all movies
+        const response = await fetch(localJSONPath);
+        const movies = await response.json();
+        console.log(movies);
+
+        // Handling featured movies (assuming the first three are featured)
+        const featuredMovies = movies.slice(0, 3);
+        if (featuredMovies.length > 0 && promotionsContainer !== null) {
+            promotionsContainer.innerHTML = `
+                <input type="radio" name="slide" id="image1" checked>
+                <input type="radio" name="slide" id="image2">
+                <input type="radio" name="slide" id="image3">
+                
+                <img src="${featuredMovies[0].image}" alt="Poster for ${featuredMovies[0].name}" class="img1" />
+                <img src="${featuredMovies[1].image}" alt="Poster for ${featuredMovies[1].name}" class="img2" />
+                <img src="${featuredMovies[2].image}" alt="Poster for ${featuredMovies[2].name}" class="img3" />`;
+
+            promotionsNavContainer.innerHTML = `
+                <label for="image1"></label>
+                <label for="image2"></label>
+                <label for="image3"></label>`;
+        }
+
+        // Populate the "Continue Watching" section
+        const continueWatching = movies.filter(movie => movie.watching);
+        if (continueWatching.length > 0 && continueContainer !== null) {
+            continueContainer.innerHTML = continueWatching.map(movie => `
+                <div><img src="${movie.image}" alt="Poster for ${movie.name}" class="continue__img" /></div>
+            `).join('');
+        }
+
+        // Populate the "My List" section
+        const myList = movies.filter(movie => movie.myList);
+        if (myList.length > 0 && myListContainer !== null) {
+            myListContainer.innerHTML = myList.map(movie => `
+                <div><a href="/films/movie.html?movie=${movie.id}"><img src="${movie.image}" alt="Poster for ${movie.name}" class="img" /></a></div>
+            `).join('');
+        }
+
+        // Filtering movies by genre and populating corresponding sections
+        movies.forEach(movie => {
+            movie.genre.forEach(genre => {
+                if (genre.toLowerCase() === 'horror' && horrorContainer !== null) {
+                    horrorContainer.innerHTML += `
+                        <div><a href="/films/movie.html?movie=${movie.id}"><img src="${movie.image}" alt="Poster for ${movie.name}" class="img" /></a></div>`;
+                } else if (genre.toLowerCase() === 'comedy' && comedyContainer !== null) {
+                    comedyContainer.innerHTML += `
+                        <div><a href="/films/movie.html?movie=${movie.id}"><img src="${movie.image}" alt="Poster for ${movie.name}" class="img" /></a></div>`;
+                } else if (genre.toLowerCase() === 'drama' && dramaContainer !== null) {
+                    dramaContainer.innerHTML += `
+                        <div><a href="/films/movie.html?movie=${movie.id}"><img src="${movie.image}" alt="Poster for ${movie.name}" class="img" /></a></div>`;
+                } else if (genre.toLowerCase() === 'action' && actionContainer !== null) {
+                    actionContainer.innerHTML += `
+                        <div><a href="/films/movie.html?movie=${movie.id}"><img src="${movie.image}" alt="Poster for ${movie.name}" class="img" /></a></div>`;
+                }
+            });
+        });
+    } catch (error) {
+        console.log(error);
+        if (continueContainer !== null) {
+            continueContainer.innerHTML = `<p>Something went wrong. Please try again later.</p>`;
+        }
+    }
+}
+
+getMovies();
+
+
 // // accessing html content
 // const continueContainer = document.querySelector(".continue");
 // const myListContainer = document.querySelector(".my-list");
@@ -121,89 +204,3 @@
 // }
 
 // getMovies();
-
-
-
-  
-
-// Accessing HTML content
-const continueContainer = document.querySelector(".continue");
-const myListContainer = document.querySelector(".my-list");
-const horrorContainer = document.querySelector(".horror");
-const comedyContainer = document.querySelector(".comedy");
-const dramaContainer = document.querySelector(".drama");
-const actionContainer = document.querySelector(".action");
-const promotionsContainer = document.querySelector(".images");
-const promotionsNavContainer = document.querySelector(".navigation-manual");
-
-// Local JSON file paths
-const localJSONPath = "/json/movies.json";
-
-async function getMovies() {
-    try {
-        // Fetching all movies
-        const response = await fetch(localJSONPath);
-        const movies = await response.json();
-        console.log(movies);
-
-        // Handling featured movies (assuming the first three are featured)
-        const featuredMovies = movies.slice(0, 3);
-        if (featuredMovies.length > 0 && promotionsContainer !== null) {
-            promotionsContainer.innerHTML = `
-                <input type="radio" name="slide" id="image1" checked>
-                <input type="radio" name="slide" id="image2">
-                <input type="radio" name="slide" id="image3">
-                
-                <img src="${featuredMovies[0].image}" alt="Poster for ${featuredMovies[0].name}" class="img1" />
-                <img src="${featuredMovies[1].image}" alt="Poster for ${featuredMovies[1].name}" class="img2" />
-                <img src="${featuredMovies[2].image}" alt="Poster for ${featuredMovies[2].name}" class="img3" />`;
-
-            promotionsNavContainer.innerHTML = `
-                <label for="image1"></label>
-                <label for="image2"></label>
-                <label for="image3"></label>`;
-        }
-
-        // Populate the "Continue Watching" section
-        const continueWatching = movies.filter(movie => movie.watching);
-        if (continueWatching.length > 0 && continueContainer !== null) {
-            continueContainer.innerHTML = continueWatching.map(movie => `
-                <div><img src="${movie.image}" alt="Poster for ${movie.name}" class="continue__img" /></div>
-            `).join('');
-        }
-
-        // Populate the "My List" section
-        const myList = movies.filter(movie => movie.myList);
-        if (myList.length > 0 && myListContainer !== null) {
-            myListContainer.innerHTML = myList.map(movie => `
-                <div><a href="/films/movie.html?movie=${movie.id}"><img src="${movie.image}" alt="Poster for ${movie.name}" class="img" /></a></div>
-            `).join('');
-        }
-
-        // Filtering movies by genre and populating corresponding sections
-        movies.forEach(movie => {
-            movie.genre.forEach(genre => {
-                if (genre.toLowerCase() === 'horror' && horrorContainer !== null) {
-                    horrorContainer.innerHTML += `
-                        <div><a href="/films/movie.html?movie=${movie.id}"><img src="${movie.image}" alt="Poster for ${movie.name}" class="img" /></a></div>`;
-                } else if (genre.toLowerCase() === 'comedy' && comedyContainer !== null) {
-                    comedyContainer.innerHTML += `
-                        <div><a href="/films/movie.html?movie=${movie.id}"><img src="${movie.image}" alt="Poster for ${movie.name}" class="img" /></a></div>`;
-                } else if (genre.toLowerCase() === 'drama' && dramaContainer !== null) {
-                    dramaContainer.innerHTML += `
-                        <div><a href="/films/movie.html?movie=${movie.id}"><img src="${movie.image}" alt="Poster for ${movie.name}" class="img" /></a></div>`;
-                } else if (genre.toLowerCase() === 'action' && actionContainer !== null) {
-                    actionContainer.innerHTML += `
-                        <div><a href="/films/movie.html?movie=${movie.id}"><img src="${movie.image}" alt="Poster for ${movie.name}" class="img" /></a></div>`;
-                }
-            });
-        });
-    } catch (error) {
-        console.log(error);
-        if (continueContainer !== null) {
-            continueContainer.innerHTML = `<p>Something went wrong. Please try again later.</p>`;
-        }
-    }
-}
-
-getMovies();
